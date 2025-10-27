@@ -1,7 +1,8 @@
 {
   "name": "rest-express",
   "version": "1.0.0",
-  "type": "module",
+  const express = require("express");
+const path = require("path");
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
