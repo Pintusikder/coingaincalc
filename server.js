@@ -1,20 +1,23 @@
-// ===== CoinGainCalc Node.js Server (Render-ready) =====
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
 const app = express();
-
-// Serve all static files (HTML, CSS, JS, images) from the root folder
-app.use(express.static(path.join(__dirname)));
-
-// Default route: serve index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-// Render automatically assigns a PORT (e.g., 10000)
 const PORT = process.env.PORT || 3000;
 
-// Start server
+// Fix for __dirname in ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files from 'public' folder
+app.use(express.static(path.join(__dirname, "public")));
+
+// Default route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`✅ CoinGainCalc server running on port ${PORT}`);
+  console.log(`✅ Server is running on port ${PORT}`);
 });
