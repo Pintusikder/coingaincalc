@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CoinGainCalc</title>
+  <meta name="description" content="CoinGainCalc - Simple crypto profit calculator" />
+  <link rel="stylesheet" href="/style.css" />
+  <!-- GA4 snippet: loads analytics/ga4.js -->
+  <script src="/analytics/ga4.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>CoinGainCalc</h1>
+    <p>Crypto profit & loss calculator</p>
+  </header>
+
+  <main>
+    <section id="calculator">
+      <label>Buy Price: <input id="buy" type="number" value="100"></label>
+      <label>Sell Price: <input id="sell" type="number" value="120"></label>
+      <label>Quantity: <input id="qty" type="number" value="1"></label>
+      <button id="calc">Calculate</button>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
