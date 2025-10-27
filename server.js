@@ -1,29 +1,20 @@
-/**
- * Express server for CoinGainCalc
- * - Serves static frontend from /public
- * - Uses process.env.PORT for Render compatibility
- * - Minimal security headers with helmet
- */
-
-const express = require('express');
-const path = require('path');
-const helmet = require('helmet');
-
+// ===== CoinGainCalc Node.js Server (Render-ready) =====
+const express = require("express");
+const path = require("path");
 const app = express();
-app.use(helmet());
 
-// Serve static files from public
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve all static files (HTML, CSS, JS, images) from the root folder
+app.use(express.static(path.join(__dirname)));
 
-// Health check
-app.get('/healthz', (req, res) => res.json({status: 'ok'}));
-
-// Fallback to index.html for SPA routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Default route: serve index.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
+// Render automatically assigns a PORT (e.g., 10000)
 const PORT = process.env.PORT || 3000;
+
+// Start server
 app.listen(PORT, () => {
-  console.log(`CoinGainCalc server listening on port ${PORT}`);
+  console.log(`✅ CoinGainCalc server running on port ${PORT}`);
 });
