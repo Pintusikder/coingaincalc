@@ -1,30 +1,70 @@
-<!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CoinGainCalc</title>
-  <meta name="description" content="CoinGainCalc - Simple crypto profit calculator" />
-  <link rel="stylesheet" href="/style.css" />
-  <!-- GA4 snippet: loads analytics/ga4.js -->
-  <script src="/analytics/ga4.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1>CoinGainCalc</h1>
-    <p>Crypto profit & loss calculator</p>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="theme-color" content="#6366f1" />
 
-  <main>
-    <section id="calculator">
-      <label>Buy Price: <input id="buy" type="number" value="100"></label>
-      <label>Sell Price: <input id="sell" type="number" value="120"></label>
-      <label>Quantity: <input id="qty" type="number" value="1"></label>
-      <button id="calc">Calculate</button>
-      <div id="result"></div>
-    </section>
-  </main>
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512" href="/attached_assets/image_1759669155411_1759669185154.jpg" />
+    <link rel="apple-touch-icon" href="/attached_assets/image_1759669155411_1759669185154.jpg" />
 
-  <script src="/script.js" defer></script>
-</body>
+    <!-- ✅ SEO Meta Tags -->
+    <title>CoinGainCalc - Live Crypto Profit Calculator</title>
+    <meta name="description" content="Calculate your cryptocurrency profits live with CoinGainCalc. Real-time crypto price updates, ROI analysis, and secure calculations." />
+    <meta name="keywords" content="crypto profit calculator, bitcoin ROI, ethereum profit calculator, live crypto prices, CoinGainCalc" />
+    <link rel="canonical" href="https://coingaincalc.com/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- ✅ Open Graph (for Facebook, WhatsApp, etc.) -->
+    <meta property="og:title" content="CoinGainCalc - Live Crypto Profit Calculator" />
+    <meta property="og:description" content="Easily calculate your crypto profits and ROI in real-time." />
+    <meta property="og:image" content="https://coingaincalc.com/attached_assets/image_1759669155411_1759669185154.jpg" />
+    <meta property="og:url" content="https://coingaincalc.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CoinGainCalc - Live Crypto Profit Calculator" />
+    <meta name="twitter:description" content="Track your crypto profits securely and fast with CoinGainCalc." />
+    <meta name="twitter:image" content="https://coingaincalc.com/attached_assets/image_1759669155411_1759669185154.jpg" />
+
+    <!-- ✅ Security Meta Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;" />
+
+    <!-- ✅ Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ✅ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R42DCE7600"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R42DCE7600');
+    </script>
+
+    <!-- ✅ Main CSS & JS -->
+    <link rel="manifest" href="/manifest.json" />
+    <script type="module" crossorigin src="/assets/index-CzAxG1iX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C3qOKypC.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- ✅ Optional: Lazy loading for better performance -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("CoinGainCalc loaded successfully!");
+      });
+    </script>
+  </body>
 </html>
